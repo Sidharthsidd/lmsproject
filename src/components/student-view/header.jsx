@@ -54,11 +54,11 @@ function StudentViewCommonHeader() {
           </button>
             {/* Floating Chatbot */}
       {showChatbot && (
-        <div className="fixed bottom-16 right-4 z-50 bg-white p-4 rounded-lg shadow-xl w-50 mr-6 top-7">
-          <Chatbot className="fixed bottom-16 right-4 z-50 bg-white p-4 rounded-lg shadow-xl w-80 mr-6 top-7" />
+        <div className="fixed  right-4 z-50 bg-white p-4 rounded-lg shadow-xl w-50 mr-6 top-11">
+          <Chatbot className="fixed  right-4 z-50 bg-white p-4 rounded-lg shadow-xl w-80 mr-6 top-7" />
         </div>
       )}
-        <div className="flex gap-4 items-center">
+        <div className="flex gap- items-center">
           <div
             onClick={() => navigate("/student-courses")}
             className="flex cursor-pointer items-center gap-3"

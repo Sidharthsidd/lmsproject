@@ -30,15 +30,21 @@ function Chatbot() {
   };
 
   return (
-    <div className="max-w-xl mx-auto p-6 bg-white shadow-lg rounded-lg">
-    <h1 className="text-3xl font-semibold text-center mb-6">Learning Ai</h1>
-    <div className="chat-history space-y-4 mb-6 h-80 overflow-y-auto border-b border-gray-200 pb-4">
+    <div className="max-w-xl mx-auto h-auto mt-8 p-6 bg-white shadow-lg rounded-lg">
+    <h1 className="text-3xl font-semibold text-center mb-6">Learning AI</h1>
+    <div className="chat-history space-y-4 mb-4 h-96 overflow-y-auto border-b border-gray-200 pb-4">
       {messages.map((msg, idx) => (
-       <div
-       key={idx}
-       className={`text-sm wd-50 p-3 rounded-lg ${msg.role === 'user' ? 'bg-blue-500 w-auto text-white self-end' : 'bg-gray-200 text-black self-start w-auto'}`}
-       dangerouslySetInnerHTML={{ __html: msg.text.replace(/\n/g, '<br />') }} // Adds line breaks from \n
-     />
+        <div
+          key={idx}
+          className={`text-sm wd-50 p-3 rounded-lg ${
+            msg.role === 'user'
+              ? 'bg-blue-500 w-auto text-white self-end'
+              : 'bg-gray-200 text-black self-start w-auto'
+          }`}
+          dangerouslySetInnerHTML={{
+            __html: msg.text.replace(/\n/g, '<br />'),
+          }} // Adds line breaks from \n
+        />
       ))}
     </div>
     {loading && <div className="text-center text-gray-500">Loading...</div>}
@@ -51,12 +57,13 @@ function Chatbot() {
       />
       <button
         type="submit"
-        className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none"
+        className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none mb-0"
       >
         Send
       </button>
     </form>
   </div>
+  
   );
 }
 
