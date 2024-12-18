@@ -47,10 +47,10 @@ const Output = ({ editorRef, language }) => {
         Run Code
       </Button>
       <Box
-        height="40vh" /* Reduced height for smaller display */
-        overflowY="auto" /* Scroll if output overflows */
+        height="40vh" 
+        overflowY="auto" 
         p={3}
-        bg="gray.800" /* Add a background for better visibility */
+        bg="gray.800" 
         color={isError ? "red.400" : "white"}
         borderRadius={4}
         border="1px solid"
