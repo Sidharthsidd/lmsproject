@@ -53,7 +53,7 @@ function Chatbot() {
         value={input}
         onChange={(e) => setInput(e.target.value)}
         placeholder="Enter your message"
-        className="flex-1 p-3 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="flex-1 p-3 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-white"
       />
       <button
         type="submit"

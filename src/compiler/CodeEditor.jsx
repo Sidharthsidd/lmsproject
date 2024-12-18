@@ -21,10 +21,16 @@ const CodeEditor = () => {
   };
 
   return (
-    <Box>
-      <HStack spacing={4} align="flex-start">
+    <Box
+      bg="gray.800" // Explicit background color for the editor container
+      color="white"
+      p={4}
+      borderRadius="md"
+      shadow="lg"
+    >
+      <HStack spacing={4} alignItems="stretch">
         {/* Editor Section */}
-        <Box w="50%">
+        <Box w="50%" bg="gray.900" p={2} borderRadius="md">
           <LanguageSelector language={language} onSelect={onSelect} />
           <Editor
             options={{
@@ -32,8 +38,8 @@ const CodeEditor = () => {
                 enabled: false,
               },
             }}
-            height="40vh" /* Reduced height */
-            theme="vs-dark"
+            height="75vh"
+            theme="vs-dark" // Ensure dark theme for Monaco Editor
             language={language}
             defaultValue={CODE_SNIPPETS[language]}
             onMount={onMount}
@@ -43,7 +49,7 @@ const CodeEditor = () => {
         </Box>
 
         {/* Output Section */}
-        <Box w="50%">
+        <Box w="50%" bg="gray.900" p={2} borderRadius="md">
           <Output editorRef={editorRef} language={language} />
         </Box>
       </HStack>

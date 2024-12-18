@@ -185,7 +185,7 @@ function StudentViewCoursesPage() {
                 </DropdownMenuRadioGroup>
               </DropdownMenuContent>
             </DropdownMenu>
-            <span className="text-sm text-black font-bold">
+            <span className="text-sm text-white font-bold">
               {studentViewCoursesList.length} Results
             </span>
           </div>
